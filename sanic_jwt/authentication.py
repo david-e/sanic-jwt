@@ -311,6 +311,7 @@ class Authentication(BaseAuthentication):
             jwt.exceptions.ImmatureSignatureError,
             jwt.exceptions.InvalidIssuedAtError,
             jwt.exceptions.InvalidAudienceError,
+            jwt.exceptions.DecodeError,
         ) as e:
             is_valid = False
             reason = list(e.args)
